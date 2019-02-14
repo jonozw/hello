@@ -31,6 +31,14 @@
 	 - `%USERPROFILE%\.ssh\id_ed25519.pub` `(公钥)`
 ### 重要: 请一定备份好自己的Key
 
+## 设置GitHub
+1. 登录GitHub
+2. 打开 `https://github.com/settings/keys`
+3. 选择右上角的`New SSH Key`
+4. Title随便写, 就是个注释, 毕竟GitHub允许加入多个Key, 不加名字以后自己都不认识了
+5. Key的部分, 打开`id_rsa.pub`, 全部拷贝, 然后这里粘贴
+6. 确认, 完毕
+
 ## 关联和提交
 1. 要关联一个远程库，使用Git命令  
    `git remote add origin git@server-name:path/repo-name.git`  
