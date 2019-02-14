@@ -41,9 +41,9 @@
 
 ## 关联和提交
 1. 要关联一个远程库
-  + 首先打开Git Bash
-  + 进入你要做版本管理的目录
-  + Git init
+    + 首先打开Git Bash
+    + 进入你要做版本管理的目录
+    + Git init
 2. 然后再使用Git命令  
    `git remote add origin git@server-name:path/repo-name.git`  
    对应到GitHub, 就是(大写的字母是要被替换的)  
