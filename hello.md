@@ -2,7 +2,7 @@
 
 ## 安装Git
 1. 访问Git官网 https://git-scm.com/
-2. 下载Windows版本 https://git-scm.com/download/win
+2. 下载Windows版本 https://git-scm.com/download/win/
 3. 安装
 
 ## 注册GitHub账号
@@ -11,7 +11,15 @@
 
 ## 生成SSH Key
 1. 打开Git Bash
-2. 
+2. 运行SSH命令`ssh-keygen`以生成密钥对  
+   ssh-keygen的命令行选项很多, 具体参数请自行搜索学习, 缺省的命令如下  
+   + `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
+   这个命令会产生几次交互
+   一次是问存贮的文件名  
+   + `Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]`  
+   建议直接回车用缺省文件名, 不然GitHub不认, 还得改名, 麻烦
+   一次是要求输入key的密码, 这个也建议为空, 不然每次提交都要输入密码, 太麻烦  
+   + `Enter passphrase (empty for no passphrase): [Press Enter]`
 3. 生成后的SSH Key存放在目录 `%USERPROFILE%\.ssh`下
    `注意`: 生成Key的时候, 会问你用于存放Key的文件名, 但是Git本身只认缺省的文件名
    缺省的文件名根据选择的加密方式而不同
