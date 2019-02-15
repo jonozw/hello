@@ -90,5 +90,6 @@ Thumbs.db
 ```
 
 ## 使用Visual Studio Code
-
+1. 看起来似乎Visual Studio Code只认识第一层带Git版本管理的子目录, 再深就不认识了, 不能自动在左侧版本管理栏出现
+2. 在文件修改后, 会增加更改一栏
 
