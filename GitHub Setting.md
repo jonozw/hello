@@ -58,9 +58,6 @@
 ## 设置Git忽略文件
    git config --global core.excludesfile ~/.gitignore
 
-## 使用Visual Studio Code
-
-当弟弟
 
 ```
 # Jupyter check points
@@ -91,3 +88,7 @@ Thumbs.db
 .svn
 
 ```
+
+## 使用Visual Studio Code
+
+
