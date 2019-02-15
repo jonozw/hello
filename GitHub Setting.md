@@ -55,3 +55,32 @@
    `git push origin master`  
    来将本地已经提交的内容, 推送到远程库中  
 
+## 设置Git忽略文件
+   git config --global core.excludesfile ~/.gitignore
+
+```
+# Jupyter check points
+.ipynb_checkpoints/
+
+# Visual studio code
+.vscode/
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Apple local file
+*/.DS_Store
+.DS_Store
+
+# Image local file
+Thumbs.db
+
+# System file
+*.bak
+*.tem
+*.temp
+.swp
+*.*~
+~*.*
+
+```
