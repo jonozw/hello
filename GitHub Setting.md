@@ -57,7 +57,7 @@
 
 ## 设置Git忽略文件
    git config --global core.excludesfile ~/.gitignore
-
+   下面是.gitignore文件的样例
 
 ```
 # Jupyter check points
@@ -92,7 +92,7 @@ Thumbs.db
 ## 使用Visual Studio Code
 1. 看起来似乎Visual Studio Code只认识第一层带Git版本管理的子目录, 再深就不认识了, 不能自动在左侧版本管理栏出现
 2. 在文件修改后, 会增加一项`更改`项
-3. 将鼠标移动到更改那一栏, 会出现一个加号`+`图标
-4. 点击加号`+`图标, 将`更改` `暂存`(这个暂存不是Git的commit, 需要单独)
-5. 将鼠标移动到`PROJECT GIT`的那一行, 会出现对勾`√`图标, 点击对勾图标`√`, 才是真正的`commit`
+3. 将鼠标移动到更改那一栏, 会出现一个加号`+` `更改暂存` 图标
+4. 点击加号`+`图标, 将`更改` `暂存`(这个图标对应的是Git的`add`命令)
+5. 将鼠标移动到`PROJECT GIT`的那一行, 会出现对勾`√` `提交` 图标, 点击对勾图标`√`, 进行`commit`
 6. `commit`以后, 再点击上方的`PROJECT Git`(带分支图标和循环图标的那一栏), 进行Git push即可
