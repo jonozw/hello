@@ -107,4 +107,8 @@ Thumbs.db
 ## 命令行自动化
 需要写一个简单的批处理, 来把GUI的操作执行了.
 
+
 ## Git Merge
+
+
+## GitHub和OneDrive共存的方法
