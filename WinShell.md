@@ -57,5 +57,6 @@
 + 服务                                     services.msc
 + Windows安全中心               wscui.cpl
 
+TODO: 需要表格化
 
 ## PowerShell
