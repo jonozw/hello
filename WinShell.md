@@ -60,3 +60,16 @@
 TODO: 需要表格化
 
 ## PowerShell
+
+
+
+
+
+
+
+## 杂项
+### https://chocolatey.org/
+Windows下的apt-get, 基于PowerShell实现
+
+
+### 
