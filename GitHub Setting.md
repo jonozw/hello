@@ -89,7 +89,8 @@ Thumbs.db
 
 ```
 
-## 使用Visual Studio Code
+## 使用Visual Studio Code来进行Git操作
+### Visual Studio Code基本操作
 1. 看起来似乎Visual Studio Code只认识第一层带Git版本管理的子目录, 再深就不认识了, 不能自动在左侧版本管理栏出现
 2. 在文件修改后, 会增加一项`更改`项
 3. 将鼠标移动到更改那一栏, 会出现一个加号`+` `更改暂存` 图标
@@ -97,8 +98,11 @@ Thumbs.db
 5. 将鼠标移动到`PROJECT GIT`的那一行, 会出现对勾`√` `提交` 图标, 点击对勾图标`√`, 进行`commit`
 6. `commit`以后, 再点击上方的`PROJECT Git`(带分支图标和循环图标的那一栏), 进行Git push即可
 
-## 使用Visual Studio Code 
-
+### 一些Visual Studio Code的Git杂项
+1. VSC的Git和命令行的Git是`相通`的, 一个操作, 在VSC的GUI上进行操作和在命令行进行操作, 是完全等同的.
+   甚至可以一半操作在命令行, 一半操作在GUI也毫无问题.
+   比方说在命令行里`+`隐式执行Git的add命令, 然后在命令行里`Git status`就能看到add完毕了.
+   在命令行里commit后, 在GUI里看, 表示有未提交代码的角标就消失了.
 
 
 ## Git Merge
