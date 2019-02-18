@@ -96,3 +96,9 @@ Thumbs.db
 4. 点击加号`+`图标, 将`更改` `暂存`(这个图标对应的是Git的`add`命令)
 5. 将鼠标移动到`PROJECT GIT`的那一行, 会出现对勾`√` `提交` 图标, 点击对勾图标`√`, 进行`commit`
 6. `commit`以后, 再点击上方的`PROJECT Git`(带分支图标和循环图标的那一栏), 进行Git push即可
+
+## 使用Visual Studio Code 
+
+
+
+## Git Merge
