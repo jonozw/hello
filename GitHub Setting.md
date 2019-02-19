@@ -46,6 +46,13 @@
 
 ### SSH选读部分
 ### 如何在一台机器上共存多个GitHub帐号(多SSH密钥的处理)
+1. 生成多个SSH密钥对
+   + 注意, 生成多个SSH密钥, 就必须明确指明存贮密钥的文件名了.
+     `ssh-keygen -t rsa -C "your-email-address" -f `%USERPROFILE%/.ssh/RP-KEYNAME`  
+   + 假设我们用两个帐号, 一个工作用(RP-WORK), 一个私人用(RP-HOME), 则生成了两个密钥
+     - RP-WORK
+     - RP-HOME
+   
 
 
 
