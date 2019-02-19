@@ -15,7 +15,8 @@
 
 ## SSH相关
 ### SSH必读部分
-### 生成SSH Key
+### 重要: 请一定备份好自己的密钥
+### 生成SSH密钥
 1. 打开Git Bash
 2. 运行SSH命令`ssh-keygen`以生成密钥对  
    ssh-keygen的命令行选项很多, 具体参数请自行搜索学习, 缺省的命令如下  
@@ -34,10 +35,8 @@
      - `%USERPROFILE%\.ssh\id_rsa.pub` `(公钥)`  
    + 选择ED25519的时候, 其文件名是  
      - `%USERPROFILE%\.ssh\id_ed25519` `(私钥)` 和  
-	 - `%USERPROFILE%\.ssh\id_ed25519.pub` `(公钥)`  
-### 重要: 请一定备份好自己的Key
-
-## 设置GitHub
+	   - `%USERPROFILE%\.ssh\id_ed25519.pub` `(公钥)`  
+### 设置GitHub的SSH公钥
 1. 登录GitHub
 2. 打开 `https://github.com/settings/keys`
 3. 选择右上角的`New SSH Key`
@@ -45,7 +44,14 @@
 5. Key的部分, 打开公钥文件`xxx.pub`, 全部拷贝, 然后这里粘贴
 6. 确认, 完毕
 
-## 关联和提交
+### SSH选读部分
+### 如何在一台机器上共存多个GitHub帐号
+
+
+
+
+
+## 关联GitHub远程仓库和初次提交
 1. 要关联一个远程库
    + 首先打开Git Bash
    + 进入你要做版本管理的目录
@@ -120,7 +126,7 @@ Thumbs.db
 ### GitHub和OneDrive共存的方法
 
 
-### 如何在一台机器上共存多个GitHub帐号
+
 
 
 ### 如何从GitHub上只提取代码库的一个子目录
@@ -160,7 +166,6 @@ Thumbs.db
   ~\RP-REPO.git\trunk\subdir\  
    ```
   最后, 执行SVN的checkout吧:)
-
 
 
 
