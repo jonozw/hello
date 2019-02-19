@@ -13,14 +13,16 @@
 1. 访问GitHub官网 https://github.com/
 2. 注册账号
 
-## 生成SSH Key
+## SSH相关
+### SSH必读部分
+### 生成SSH Key
 1. 打开Git Bash
 2. 运行SSH命令`ssh-keygen`以生成密钥对  
    ssh-keygen的命令行选项很多, 具体参数请自行搜索学习, 缺省的命令如下  
-   + `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
+   `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
    这个命令会产生几次交互
    一次是问存贮的文件名  
-   + `Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]`  
+   `Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]`  
    建议直接回车用缺省文件名, 不然还得单独去配置SSH, 如果不是很熟悉SSH的配置, 建议就还是别改名了  
    一次是要求输入key的密码, 这个也建议为空, 不然每次提交都要输入密码, 太麻烦  
    + `Enter passphrase (empty for no passphrase): [Press Enter]`
