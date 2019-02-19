@@ -20,7 +20,7 @@
 1. 打开Git Bash
 2. 运行SSH命令`ssh-keygen`以生成密钥对  
    ssh-keygen的命令行选项很多, 具体参数请自行搜索学习, 缺省的命令如下  
-   `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
+   `ssh-keygen -t ed25519 -b 4096 -C "your_email@example.com"`  
    这个命令会产生几次交互
    一次是问存贮的文件名  
    `Enter a file in which to save the key (/c/Users/you/.ssh/id_rsa):[Press enter]`  
@@ -36,6 +36,7 @@
    + 选择ED25519的时候, 其文件名是  
      - `%USERPROFILE%\.ssh\id_ed25519` `(私钥)` 和  
 	   - `%USERPROFILE%\.ssh\id_ed25519.pub` `(公钥)`  
+   + 这里建议大家选择ED25519, 在密码学里, ED25519的评价远高于RSA采用的不透明算法NIST.
 ### 设置GitHub的SSH公钥
 1. 登录GitHub
 2. 打开 `https://github.com/settings/keys`
@@ -48,7 +49,7 @@
 ### 如何在一台机器上共存多个GitHub帐号(多SSH密钥的处理)
 1. 生成多个SSH密钥对
    + 注意, 生成多个SSH密钥, 就必须明确指明存贮密钥的文件名了.
-     `ssh-keygen -t rsa -C "your-email-address" -f `%USERPROFILE%/.ssh/RP-KEYNAME`  
+     `ssh-keygen -t ed25519 -b 4096 -C "your-email-address" -f `%USERPROFILE%/.ssh/RP-KEYNAME`  
    + 假设我们用两个帐号, 一个工作用(RP-WORK), 一个私人用(RP-HOME), 则生成了两个密钥对, 四个文件
      - RP-WORK, RP-WORK.pub
      - RP-HOME, RP-HOME.pub
