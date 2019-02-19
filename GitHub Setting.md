@@ -125,7 +125,7 @@ Thumbs.db
    
    Git 1.7.0之前是不支持这种操作的, 在Git 1.7.0后, Git加入了稀疏检出`Sparse Checkout`模式, 允许checkout指定文件或者文件夹. 但是即便是这种稀疏检出的方法, 也并没有降低网络消耗, 其实质依然是全部检出到本地, 只是不需要的部分被自动删除掉了.  
    
-   还好, GitHub并不完全等同于Git`本身`, 为了让SVN的客户能方便地迁移到Git, GitHub允许采用SVN协议来访问仓库.  
+   还好, GitHub并不完全等同于Git`本身`, 为了让SVN的客户能方便地迁移到Git, GitHub也支持SVN, 允许用户用SVN协议来访问仓库.  
 
    远程仓库路径: https://github.com/ACCOUNT/hello.git  
    
