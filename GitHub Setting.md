@@ -110,5 +110,48 @@ Thumbs.db
 
 ## Git Merge
 
-
+# GitHub各种技巧
 ## GitHub和OneDrive共存的方法
+
+
+## 如何在一台机器上共存多个GitHub帐号
+
+
+## 如何从GitHub上只提取代码库的一个子目录
+   Git的`设计理念`, 强调的是`分布式开发`, 因此要求本地需要有仓库的`完整镜像`.  
+   Git去搞一个项目, 第一个操作就是`Git clone`, 在本地生成一个远程仓库的`完整镜像`.  
+   但是很多时候, 我们其实只想下载部分子目录的东西, 把一个库全抓下来太累了, 有什么好办法能抓仓库的部分目录么?  
+   Git本身是不支持这种操作的, 如果只玩Git, 可以洗洗睡了.  
+   但是好就好在, GitHub并不是Git本身, 为了让SVN的客户能方便地迁移到Git, GitHub允许采用SVN协议来访问仓库.  
+
+   远程仓库路径: https://github.com/ACCOUNT/hello.git  
+   
+   ```
+   远程仓库的文件目录结构:  
+   hello/  
+   hello/README.md  
+   hello/subdir/  
+   hello/subdir/subdir.md  
+   ```
+   现在我们尝试只抓取远程仓库中`subdir`的部分,  首先创建本地目录结构
+   ```
+   本地目录结构:  
+   hello.git/  
+   hello.git/trunk/  
+   hello.git/trunk/howto  
+   ```
+   其中项目根目录的名字`hello.git`是随便取的, 这个根目录名可以随意, 但是还是建议取得和`远程仓库`的名字一样.  
+   根目录下的子目录`trunk`可就`不是`可以随便更改的了, 必须如此命名.  
+   事实上, 在SVN中, `trunk`才是根目录, 然后就按照`远程仓库`的目录结构, 手工创建同样的目录树吧.  
+   例子中, 创建`howto`子目录完毕后, 进入`howto`子目录.  
+   ```
+   远程源:  
+   https://github.com/ACCOUNT/hello.git/trunk/howto
+   本地目录:  
+   ~\hello.git\trunk\howto  
+   ```
+   最后, 执行SVN的checkout吧:)
+
+
+
+
