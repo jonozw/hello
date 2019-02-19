@@ -1,4 +1,6 @@
 # GitHub 使用手册
+## SVN Checkout
+## 单独checkout
 
 ## 安装Git
 1. 访问Git官网 https://git-scm.com/
