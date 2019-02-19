@@ -1,5 +1,9 @@
 # GitHub 使用手册
 
+## 前言
++ 本文中, 凡是RP开头的全大写字符串, 都需要读者根据自己的实际情况, 替换成自己的实际内容
++  
+
 ## 安装Git
 1. 访问Git官网 https://git-scm.com/
 2. 下载Windows版本 https://git-scm.com/download/win/
