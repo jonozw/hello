@@ -1,7 +1,7 @@
 # GitHub 使用手册
 
 ## 前言
-+ 本文中, 凡是RP开头的全大写字符串, 都需要读者根据自己的实际情况, 替换成自己的实际内容
++ 本文中, 凡是`RP-`开头的全大写字符串, 都需要读者根据自己的实际情况, `替换`成自己的实际内容
 +  
 
 ## 安装Git
@@ -116,50 +116,50 @@ Thumbs.db
 
 ## Git Merge
 
-# GitHub各种技巧
-## GitHub和OneDrive共存的方法
+## GitHub各种技巧
+### GitHub和OneDrive共存的方法
 
 
-## 如何在一台机器上共存多个GitHub帐号
+### 如何在一台机器上共存多个GitHub帐号
 
 
-## 如何从GitHub上只提取代码库的一个子目录
-   Git的`设计理念`, 强调的是`分布式开发`, 因此要求本地需要有仓库的`完整镜像`.  
+### 如何从GitHub上只提取代码库的一个子目录
+  Git的`设计理念`, 强调的是`分布式开发`, 因此要求本地需要有仓库的`完整镜像`.  
    
-   Git去搞一个项目, 第一个操作就是`Git clone`, 在本地生成一个远程仓库的`完整镜像`.  
-   但是很多时候, 我们其实只想下载部分子目录的东西, 把一个库全抓下来太累了, 有什么好办法能抓仓库的部分目录么?  
+  Git去搞一个项目, 第一个操作就是`Git clone`, 在本地生成一个远程仓库的`完整镜像`.  
+  但是很多时候, 我们其实只想下载部分子目录的东西, 把一个库全抓下来太累了, 有什么好办法能抓仓库的部分目录么?  
    
-   Git 1.7.0之前是不支持这种操作的, 在Git 1.7.0后, Git加入了稀疏检出`Sparse Checkout`模式, 允许checkout指定文件或者文件夹. 但是即便是这种稀疏检出的方法, 也并没有降低网络消耗, 其实质依然是全部检出到本地, 只是不需要的部分被自动删除掉了.  
+  Git 1.7.0之前是不支持这种操作的, 在Git 1.7.0后, Git加入了稀疏检出`Sparse Checkout`模式, 允许checkout指定文件或者文件夹. 但是即便是这种稀疏检出的方法, 也并没有降低网络消耗, 其实质依然是全部检出到本地, 只是不需要的部分被自动删除掉了.  
    
-   还好, GitHub并不完全等同于Git`本身`, 为了让SVN的客户能方便地迁移到Git, GitHub也支持SVN, 允许用户用SVN协议来访问仓库.  
+  还好, GitHub并不完全等同于Git`本身`, 为了让SVN的客户能方便地迁移到Git, GitHub也支持SVN, 允许用户用SVN协议来访问仓库.  
 
-   远程仓库路径: https://github.com/ACCOUNT/hello.git  
+  远程仓库路径: https://github.com/RP-ACCOUNT/RP-REPO.git  
    
+  ```
+  远程仓库的文件目录结构:  
+  RP-REPO/  
+  RP-REPO/README.md  
+  RP-REPO/subdir/  
+  RP-REPO/subdir/subdir.md  
+  ```
+  现在我们尝试只抓取远程仓库中`subdir`的部分,  首先创建本地目录结构
+  ```
+  本地目录结构:  
+  RP-REPO.git/  
+  RP-REPO.git/trunk/  
+  RP-REPO.git/trunk/subdir/  
+  ```
+  本地目录结构中的目录名`RP-REPO.git`是随便取的, 这个根目录名可以随意, 但是还是建议取得和`远程仓库`的名字一样.  
+  根目录下的子目录`trunk`可就`不是`可以随便更改的了, 必须如此命名.  
+  然后把`trunk`当作远程仓库的`根目录`, 按照远程仓库的`目录结构`, 手工创建同样的目录树吧.  
+  例子中, 创建`subdir`子目录完毕后, chdir进入`subdir`子目录.  
    ```
-   远程仓库的文件目录结构:  
-   hello/  
-   hello/README.md  
-   hello/subdir/  
-   hello/subdir/subdir.md  
+  远程源:  
+  https://github.com/RP-ACCOUNT/RP-REPO.git/trunk/subdir
+  本地目录:  
+  ~\RP-REPO.git\trunk\subdir\  
    ```
-   现在我们尝试只抓取远程仓库中`subdir`的部分,  首先创建本地目录结构
-   ```
-   本地目录结构:  
-   hello.git/  
-   hello.git/trunk/  
-   hello.git/trunk/howto/  
-   ```
-   其中项目根目录的名字`hello.git`是随便取的, 这个根目录名可以随意, 但是还是建议取得和`远程仓库`的名字一样.  
-   根目录下的子目录`trunk`可就`不是`可以随便更改的了, 必须如此命名.  
-   事实上, 在SVN中, `trunk`才是根目录, 然后就按照`远程仓库`的目录结构, 手工创建同样的目录树吧.  
-   例子中, 创建`howto`子目录完毕后, 进入`howto`子目录.  
-   ```
-   远程源:  
-   https://github.com/ACCOUNT/hello.git/trunk/howto
-   本地目录:  
-   ~\hello.git\trunk\howto\  
-   ```
-   最后, 执行SVN的checkout吧:)
+  最后, 执行SVN的checkout吧:)
 
 
 
