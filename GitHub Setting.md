@@ -49,10 +49,12 @@
 1. 生成多个SSH密钥对
    + 注意, 生成多个SSH密钥, 就必须明确指明存贮密钥的文件名了.
      `ssh-keygen -t rsa -C "your-email-address" -f `%USERPROFILE%/.ssh/RP-KEYNAME`  
-   + 假设我们用两个帐号, 一个工作用(RP-WORK), 一个私人用(RP-HOME), 则生成了两个密钥
-     - RP-WORK
-     - RP-HOME
-   
+   + 假设我们用两个帐号, 一个工作用(RP-WORK), 一个私人用(RP-HOME), 则生成了两个密钥对, 四个文件
+     - RP-WORK, RP-WORK.pub
+     - RP-HOME, RP-HOME.pub
+   + 将不同的公钥设置到不同的GitHub帐号中
+   + 将密钥加入SSH Agent中
+     - ssh sh-add 
 
 
 
