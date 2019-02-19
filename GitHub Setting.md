@@ -141,7 +141,7 @@ Thumbs.db
    本地目录结构:  
    hello.git/  
    hello.git/trunk/  
-   hello.git/trunk/howto  
+   hello.git/trunk/howto/  
    ```
    其中项目根目录的名字`hello.git`是随便取的, 这个根目录名可以随意, 但是还是建议取得和`远程仓库`的名字一样.  
    根目录下的子目录`trunk`可就`不是`可以随便更改的了, 必须如此命名.  
@@ -151,7 +151,7 @@ Thumbs.db
    远程源:  
    https://github.com/ACCOUNT/hello.git/trunk/howto
    本地目录:  
-   ~\hello.git\trunk\howto  
+   ~\hello.git\trunk\howto\  
    ```
    最后, 执行SVN的checkout吧:)
 
