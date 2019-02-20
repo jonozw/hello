@@ -56,9 +56,24 @@
    + 将不同的公钥设置到不同的GitHub帐号中
    + 将密钥加入SSH Agent中
      - ssh sh-add 
-
-
-
+2. 创建修改SSH配置文件
+   + 创建`~/.ssh/config`
+   + 
+3. 本地仓库的配置
+  + 如果以前配置了Git的全局用户和全局邮箱, 那么要取消一下  
+    - 输入`git config -l`, 先看看全局配置信息, 熟悉下
+    - 取消全局用户: `git config --global --unset user.name`  
+    - 取消全局邮箱: `git config --global --unset user.email`
+  + 取消了全局的邮箱和用户的代价, 就是每个仓库需要单独配置一下  
+    进入相应的Git仓库后, 执行
+    - 配置局部用户: `git config user.name "RP-USERNAME"`  
+    - 配置局部邮箱: `git config user.email "RP-USER@DOMAIN.com"`  
+  + 如果以前配置了远程仓库, 现在需要重新配置一下
+    - 先看看远程分支: `git remote -v`  
+    - 删除远程分支:   `git remote rm origin`  
+    - 重建远程分支:   `git remote add origin git@RP-DOMAIN:/RP-ACCOUNT-NAME/RP-REPO-NAME.git`  
+      * RP-DOMAIN是在`~/.ssh/config`中列出的和SSH Key对应的域名, 如果使用单帐号, 那么这部分就不用修改, 就是缺省的github.com
+4. 
 
 
 ## 关联GitHub远程仓库和初次提交
@@ -69,7 +84,7 @@
 2. 然后再使用Git命令  
    `git remote add origin git@server-name:path/repo-name.git`  
    对应到GitHub, 就是(大写的字母是要被替换的)  
-   `git remote add origin git@github.com:ACCOUNT-NAME/REPO-NAME.git`  
+   `git remote add origin git@github.com:RP-ACCOUNT-NAME/RP-REPO-NAME.git`  
 3. 关联后，首次使用Git Push命令  
    `git push -u origin master`  
    来进行第一次推送行为, 推送master分支的所有内容  
@@ -179,3 +194,44 @@ Thumbs.db
 
 
 
+
+
+
+## 暂存箱
+    3：把该key加到ssh agent上。由于不是使用默认的.ssh/id_rsa，所以你需要显示告诉ssh agent你的新key的位置
+
+    $ ssh-add ~/.ssh/id_rsa_work
+ssh-add ~/.ssh/ssh-jonozw@outlook
+ssh-add ~/.ssh/ssh-tjww@hotmail
+
+
+        1
+        可以通过ssh-add -l来确认结果
+
+    4：配置.ssh/config
+
+    $ vi .ssh/config
+     
+    # 加上以下内容
+    #default github
+    Host github.com
+      HostName github.com
+      IdentityFile ~/.ssh/id_rsa
+     
+    Host github_work
+      HostName github.com
+      IdentityFile ~/.ssh/id_rsa_work
+
+    5：这样的话，你就可以通过使用github.com别名github_work来明确说你要是使用id_rsa_work的SSH key来连接github，即使用工作账号进行操作。
+
+    #本地建库
+    $ git init
+    $ git commit -am "first commit'
+    #push到github上去
+    $ git remote add origin git@github_work:xxxx/test.git
+    $ git push origin master
+--------------------- 
+作者：一往无前-千夜 
+来源：CSDN 
+原文：https://blog.csdn.net/wolfking0608/article/details/78512171 
+版权声明：本文为博主原创文章，转载请附上博文链接！
