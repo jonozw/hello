@@ -33,6 +33,8 @@
    Start-Service ssh-agent
   ```
 ## 测试SSH全局
+尝试在windows下的etc中加入ssh_config, 失败了
+
 
 
 ## 注册GitHub账号
