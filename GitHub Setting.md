@@ -1,13 +1,39 @@
 # GitHub 使用手册
 
 ## 前言
++ 本文主要讲解了如何在Windows下使用
 + 本文中, 凡是`RP-`开头的全大写字符串, 都需要读者根据自己的实际情况, `替换`成自己的实际内容
 +  
 
+## 目录
++ [软件安装](#软件安装)
+  - [安装Git](#安装Git)
+  - [安装SSH](#安装SSH)
+
+## 必要软件
+
 ## 安装Git
+**(必选操作)**
 1. 访问Git官网 https://git-scm.com/
 2. 下载Windows版本 https://git-scm.com/download/win/
 3. 安装
+
+## 安装SSH
+**(非必要操作)**
+从Windows10 1803开始, Windows10已经内置OpenSSH Client了, 无需安装. 
+但是如果我们需要在同一台机器上使用多个帐号的话, 就需要多个SSH密钥, 从而需要ssh-agent, 而这部分功能, 是在OpenSSH Server里面的. 网上可以轻易搜到用`设置`安装OpenSSH Server的流程, 但是有些Windows版本, 设置里面没有这个选项, 那就只能采用命令行了.
+1. 以管理员身份打开`PowerShell`
+2. 运行  
+   `Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0`
+3. 运行如下四个命令, 安装并启动服务
+   ```
+   Set-Service sshd -StartupType Automatic
+   Set-Service ssh-agent -StartupType Automatic
+   Start-Service sshd
+   Start-Service ssh-agent
+  ```
+##
+
 
 ## 注册GitHub账号
 1. 访问GitHub官网 https://github.com/
