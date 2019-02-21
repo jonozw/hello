@@ -33,7 +33,7 @@
    Start-Service ssh-agent
   ```
 ## 测试SSH全局
-测试了下, 不行啊
+尝试在windows下的etc中加入ssh_config, 测试了下, 不行啊, 失败了
 
 ## 注册GitHub账号
 1. 访问GitHub官网 https://github.com/
