@@ -48,6 +48,8 @@ cscript "C:\Program Files (x86)\Microsoft Office\Office16\OSPP.VBS" /sethst:kms.
 cscript ospp.vbs /act
 如果提示看到successful的字样，那么就是激活成功了，重新打开office就好。
 
-## 
+## 设置`etc\hosts`的权限
+在贵国, 没事搞搞hosts是免不了的, 懂的和完全不懂的都请跳过, 半懂不懂的, 可以看下
++ 
 
 
