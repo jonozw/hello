@@ -26,12 +26,14 @@
 2. 运行  
    `Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0`
 3. 运行如下四个命令, 安装并启动服务
-   ```
+```
    Set-Service sshd -StartupType Automatic
    Set-Service ssh-agent -StartupType Automatic
    Start-Service sshd
    Start-Service ssh-agent
-  ```
+```
+
+
 ## 测试SSH全局
 尝试在windows下的etc中加入ssh_config, 测试了下, 不行啊, 失败了
 
@@ -61,7 +63,7 @@
      - `%USERPROFILE%\.ssh\id_rsa.pub` `(公钥)`  
    + 选择ED25519的时候, 其文件名是  
      - `%USERPROFILE%\.ssh\id_ed25519` `(私钥)` 和  
-	   - `%USERPROFILE%\.ssh\id_ed25519.pub` `(公钥)`  
+     - `%USERPROFILE%\.ssh\id_ed25519.pub` `(公钥)`  
    + 这里建议大家选择ED25519, 在密码学里, ED25519的评价远高于RSA采用的不透明算法NIST.
 ### 设置GitHub的SSH公钥
 1. 登录GitHub
