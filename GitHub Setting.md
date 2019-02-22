@@ -263,3 +263,6 @@ ssh-add ~/.ssh/ssh-tjww@hotmail
 版权声明：本文为博主原创文章，转载请附上博文
 TEST Windows SSH server  
 TEST Windows SSH server agaiin  
+
+
+双开VSC
