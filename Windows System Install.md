@@ -19,11 +19,16 @@
 + 设置BIOS从U盘启动, 或者按`F12`, 选择从U盘启动.
 + 安装程序运行, 运行到出错, 说找不到系统文件的时候, 别关机, 将U盘拔下来.
 + 将U盘插到刚才烧录ISO文件的机器上
-+ 以管理员身份, 打开`cmd`或者`power shell`
++ 以管理员身份, 打开`cmd`或者`PowerShell`
 + 运行`convert @volume /FS:NTFS`, 其中`@volume`是U盘的盘符, 将U盘的文件系统, 转换成NTFS
 + 从ISO映像文件里面, 找到`source\install.wim`, 将其拷贝到U盘对应目录`source\install.win`, 覆盖原文件.
 + 将U盘插到要安装的机器上, 选择继续安装, 搞定.
 之所以中间这么复杂, 是因为现在install.wim这个文件太大了, 超过4G了, 启动盘都是FAT32的, 放不下这个文件, 只能这样脱裤子放屁搞一下了.
+
+## 激活Windows
++ 以管理员身份打开`cmd`或者`PowerShell`
++ `slmgr /skms kms.03k.org` (如果这个kms服务器失效了, 再找个其他的就行了)
++ `slmgr /ato`
 
 ## 
 
