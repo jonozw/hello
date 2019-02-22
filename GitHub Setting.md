@@ -221,10 +221,6 @@ Thumbs.db
   最后, 执行SVN的checkout吧:)
 
 
-
-
-
-
 ## 暂存箱
     3：把该key加到ssh agent上。由于不是使用默认的.ssh/id_rsa，所以你需要显示告诉ssh agent你的新key的位置
 
@@ -268,3 +264,5 @@ TEST Windows SSH server agaiin
 
 
 双开VSC
+
+UI界面commit
