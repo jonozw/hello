@@ -158,7 +158,7 @@ Thumbs.db
 ### Visual Studio Code基本操作
 1. VSC如何打开, 关闭仓库
   + Visual Studio Code能自动扫描目录, 并打开一些Git版本管理的子目录, 如果需要Git的目录层级比较深的话, 能不能自动打开就不好说了, 不过这并不重要. 
-  + 如果VSC不能主动找到仓库并打开, 那么可以手工键入命令, `Ctrl+Shift+P`, 然后输入`Git open repository`, 然后选择Git仓库的目录, 主动打开即可.
+  + 如果VSC不能主动找到仓库并打开, 那么可以`Ctrl+Shift+P`打开命令面板(`Command Palette`)后手工键入命令, `Git open repository...`, 然后选择Git仓库的目录, 主动打开即可.
   + 如果看着版本管理里面的Git仓库太多了, 烦了, 可以输入`Git close repository`, 然后按照提示选择要关闭的仓库即可.
 
 
