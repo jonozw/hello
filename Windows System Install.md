@@ -51,5 +51,5 @@ cscript ospp.vbs /act
 ## 设置`etc\hosts`的权限
 在贵国, 没事搞搞hosts是免不了的, 懂的和完全不懂的都请跳过, 半懂不懂的, 可以看下
 + 
-
++ 
 
