@@ -99,7 +99,7 @@
   + 如果以前配置了远程仓库, 现在需要重新配置一下
     - 先看看远程分支: `git remote -v`  
     - 删除远程分支:   `git remote rm origin`  
-    - 重建远程分支:   `git remote add origin git@RP-DOMAIN:/RP-ACCOUNT-NAME/RP-REPO-NAME.git`  
+    - 重建远程分支:   `git remote add origin git@RP-DOMAIN:RP-ACCOUNT-NAME/RP-REPO-NAME.git`  
       * RP-DOMAIN是在`~/.ssh/config`中列出的和SSH Key对应的域名, 如果使用单帐号, 那么这部分就不用修改, 就是缺省的github.com
 4. 
 
