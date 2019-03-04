@@ -278,3 +278,127 @@ sadf
 
 UI界面commit
 连不上github @ 201902251415?
+
+## GitHub hosts
+
+151.101.44.249 github.global.ssl.fastly.net
+192.30.253.113 github.com
+103.245.222.133 assets-cdn.github.com
+23.235.47.133 assets-cdn.github.com
+203.208.39.104 assets-cdn.github.com
+204.232.175.78 documentcloud.github.com
+204.232.175.94 gist.github.com
+107.21.116.220 help.github.com
+207.97.227.252 nodeload.github.com
+199.27.76.130 raw.github.com
+107.22.3.110 status.github.com
+204.232.175.78 training.github.com
+207.97.227.243 www.github.com
+185.31.16.184 github.global.ssl.fastly.net
+185.31.18.133 avatars0.githubusercontent.com
+185.31.19.133 avatars1.githubusercontent.com
+
+作者：__阳阳
+链接：https://www.jianshu.com/p/4caa9c291bfc
+来源：简书
+简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。
+
+
+219.76.4.4 github-cloud.s3.amazonaws.com
+
+------------------------------------
+# Amazon AWS Start
+54.239.31.69 aws.amazon.com
+54.239.30.25 console.aws.amazon.com
+54.239.96.90 ap-northeast-1.console.aws.amazon.com
+54.240.226.81 ap-southeast-1.console.aws.amazon.com
+54.240.193.125 ap-southeast-2.console.aws.amazon.com
+54.239.54.102 eu-central-1.console.aws.amazon.com
+177.72.244.194 sa-east-1.console.aws.amazon.com
+176.32.114.59 eu-west-1.console.aws.amazon.com
+54.239.31.128 us-west-1.console.aws.amazon.com
+54.240.254.230 us-west-2.console.aws.amazon.com
+54.239.38.102 s3-console-us-standard.console.aws.amazon.com
+54.231.49.3 s3.amazonaws.com
+52.219.0.4 s3-ap-northeast-1.amazonaws.com
+54.231.242.170 s3-ap-southeast-1.amazonaws.com
+54.231.251.21 s3-ap-southeast-2.amazonaws.com
+54.231.193.37 s3-eu-central-1.amazonaws.com
+52.218.16.140 s3-eu-west-1.amazonaws.com
+52.92.72.2 s3-sa-east-1.amazonaws.com
+54.231.236.6 s3-us-west-1.amazonaws.com
+54.231.168.160 s3-us-west-2.amazonaws.com
+52.216.80.48 github-cloud.s3.amazonaws.com
+54.231.40.3 github-com.s3.amazonaws.com
+52.216.20.171 github-production-release-asset-2e65be.s3.amazonaws.com
+52.216.228.168 github-production-user-asset-6210df.s3.amazonaws.com 
+# Amazon AWS End
+
+
+52.216.164.171  github-production-release-asset-2e65be.s3.amazonaws.com  
+52.216.99.59    github-production-release-asset-2e65be.s3.amazonaws.com  
+54.231.112.144  github-production-release-asset-2e65be.s3.amazonaws.com  
+54.231.88.43    github-production-release-asset-2e65be.s3.amazonaws.com  
+52.216.8.107    github-production-release-asset-2e65be.s3.amazonaws.com  
+--------------------- 
+作者：欲穷三千界 
+来源：CSDN 
+原文：https://blog.csdn.net/duanluan/article/details/86503853 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+
+
+# Amazon AWS Start
+54.239.31.69 aws.amazon.com
+54.239.30.25 console.aws.amazon.com
+54.239.96.90 ap-northeast-1.console.aws.amazon.com
+54.240.226.81 ap-southeast-1.console.aws.amazon.com
+54.240.193.125 ap-southeast-2.console.aws.amazon.com
+54.239.54.102 eu-central-1.console.aws.amazon.com
+177.72.244.194 sa-east-1.console.aws.amazon.com
+176.32.114.59 eu-west-1.console.aws.amazon.com
+54.239.31.128 us-west-1.console.aws.amazon.com
+54.240.254.230 us-west-2.console.aws.amazon.com
+54.239.38.102 s3-console-us-standard.console.aws.amazon.com
+54.231.49.3 s3.amazonaws.com
+52.219.0.4 s3-ap-northeast-1.amazonaws.com
+54.231.242.170 s3-ap-southeast-1.amazonaws.com
+54.231.251.21 s3-ap-southeast-2.amazonaws.com
+54.231.193.37 s3-eu-central-1.amazonaws.com
+52.218.16.140 s3-eu-west-1.amazonaws.com
+52.92.72.2 s3-sa-east-1.amazonaws.com
+54.231.236.6 s3-us-west-1.amazonaws.com
+54.231.168.160 s3-us-west-2.amazonaws.com
+52.216.80.48 github-cloud.s3.amazonaws.com
+54.231.40.3 github-com.s3.amazonaws.com
+
+52.216.228.168 github-production-user-asset-6210df.s3.amazonaws.com 
+
+#52.216.99.59    github-production-release-asset-2e65be.s3.amazonaws.com  
+#54.231.112.144  github-production-release-asset-2e65be.s3.amazonaws.com  
+#54.231.88.43    github-production-release-asset-2e65be.s3.amazonaws.com  
+#52.216.8.107    github-production-release-asset-2e65be.s3.amazonaws.com  
+#52.216.20.171   github-production-release-asset-2e65be.s3.amazonaws.com 
+#52.216.16.16    github-production-release-asset-2e65be.s3.amazonaws.com 
+
+52.216.131.187   github-production-release-asset-2e65be.s3.amazonaws.com 
+
+# Amazon AWS End
+
+# GitHub Start
+151.101.44.249 github.global.ssl.fastly.net
+192.30.253.113 github.com
+103.245.222.133 assets-cdn.github.com
+23.235.47.133 assets-cdn.github.com
+203.208.39.104 assets-cdn.github.com
+204.232.175.78 documentcloud.github.com
+204.232.175.94 gist.github.com
+107.21.116.220 help.github.com
+207.97.227.252 nodeload.github.com
+199.27.76.130 raw.github.com
+107.22.3.110 status.github.com
+204.232.175.78 training.github.com
+207.97.227.243 www.github.com
+185.31.16.184 github.global.ssl.fastly.net
+185.31.18.133 avatars0.githubusercontent.com
+185.31.19.133 avatars1.githubusercontent.com
+# GitHub End
