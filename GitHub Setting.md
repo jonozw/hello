@@ -32,7 +32,9 @@
    Start-Service sshd
    Start-Service ssh-agent
 ```
-
+   Add-WindowsCapability -Online -Name OpenSSH-Client
+5. 最后键入命令将服务器数据库端口映射到本地端口   
+   `ssh  -fNg -L <本地端口>:<服务器数据库地址>  <用户名>@<服务器地址>`
 
 ## 测试SSH全局
 尝试在windows下的etc中加入ssh_config, 测试了下, 不行啊, 失败了
@@ -95,7 +97,7 @@
 1. ForwardAgent yes
 2. git config credential.helper store
 
-dddddaffsa
+
 
 
 
