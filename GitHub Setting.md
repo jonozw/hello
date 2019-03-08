@@ -86,7 +86,7 @@
      - ssh sh-add 
 2. 创建修改SSH配置文件
    + 创建`~/.ssh/config`
-   + dd
+   + 
 
 ### SSH配置文件
   在linux下, SSH配置文件的位置在 `~/.ssh/ssh_config`  
@@ -111,6 +111,8 @@
     - 重建远程分支:   `git remote add origin git@RP-DOMAIN:RP-ACCOUNT-NAME/RP-REPO-NAME.git`  
       * RP-DOMAIN是在`~/.ssh/config`中列出的和SSH Key对应的域名, 如果使用单帐号, 那么这部分就不用修改, 就是缺省的github.com
 4. 
+
+
 
 
 ## 关联GitHub远程仓库和初次提交
