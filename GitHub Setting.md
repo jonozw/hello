@@ -86,8 +86,17 @@
      - ssh sh-add 
 2. 创建修改SSH配置文件
    + 创建`~/.ssh/config`
-   + 
-3. 本地仓库的配置
+   + dd
+
+### SSH配置文件
+  在linux下, SSH配置文件的位置在 `~/.ssh/ssh_config`  
+  在windows下, SSH配置文件在 `%USERPROFILE%\.ssh\config`  
+
+1. ForwardAgent yes
+
+
+
+###. 本地仓库的配置
   + 如果以前配置了Git的全局用户和全局邮箱, 那么要取消一下  
     - 输入`git config -l`, 先看看全局配置信息, 熟悉下
     - 取消全局用户: `git config --global --unset user.name`  
