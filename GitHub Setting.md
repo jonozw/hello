@@ -93,7 +93,7 @@
   在windows下, SSH配置文件在 `%USERPROFILE%\.ssh\config`  
 
 1. ForwardAgent yes
-
+git config credential.helper store
 
 
 ###. 本地仓库的配置
