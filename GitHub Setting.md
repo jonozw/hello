@@ -95,6 +95,7 @@
 1. ForwardAgent yes
 2. git config credential.helper store
 
+chongxinjiayici
 
 
 ###. 本地仓库的配置
