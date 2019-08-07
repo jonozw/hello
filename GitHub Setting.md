@@ -120,7 +120,8 @@
       * RP-DOMAIN是在`~/.ssh/config`中列出的和SSH Key对应的域名, 如果使用单帐号, 那么这部分就不用修改, 就是缺省的github.com
 4. 
 
-
+error: src refspec master does not match any
+error: failed to push some refs to 
 
 
 ## 关联GitHub远程仓库和初次提交
