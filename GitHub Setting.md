@@ -125,20 +125,25 @@ error: failed to push some refs to
 
 
 ## 关联GitHub远程仓库和初次提交
-1. 要关联一个远程库
+1. 首先要关联一个远程库
    + 首先打开Git Bash
    + 进入你要做版本管理的目录
    + Git init
-2. 然后再使用Git命令  
-   `git remote add origin git@server-name:path/repo-name.git`  
-   对应到GitHub, 就是(大写的字母是要被替换的)  
-   `git remote add origin git@github.com:RP-ACCOUNT-NAME/RP-REPO-NAME.git`  
-3. 关联后，首次使用Git Push命令  
-   `git push -u origin master`  
-   来进行第一次推送行为, 推送master分支的所有内容  
-4. 此后，每次本地提交后，如果有必要提交到远程库，就可以使用Git命令  
-   `git push origin master`  
-   来将本地已经提交的内容, 推送到远程库中  
+2. 其次要保证此目录不是一个空目录, 不然后续命令执行会出错
+   + 至少放一个Readme.md在这个目录下
+   + 执行`git add *`
+   + 执行`git commit -a "initial"`
+3. 然后关联远程仓库  
+   + 执行`git remote add origin git@server-name:path/repo-name.git`  
+     对应到GitHub, 就是(大写的字母是要被替换的)  
+   + 执行`git remote add origin git@github.com:RP-ACCOUNT-NAME/RP-REPO-NAME.git`  
+   + 执行`git push -u origin master`  
+     来进行第一次推送行为, 推送master分支的所有内容  
+     注意, 如果没有执行第二步, 目录为空, 则执行此命令会出错.  
+4. 例行提交  
+   此后，每次本地提交后，如果有必要提交到远程库，就可以使用Git命令  
+   + `git push origin master`  
+   来将本地已经提交的内容, 推送到远程库中.  
 
 ## 设置Git忽略文件
    git config --global core.excludesfile ~/.gitignore
