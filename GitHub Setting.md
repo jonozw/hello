@@ -148,7 +148,7 @@ error: failed to push some refs to
 ## 设置Git忽略文件
    git config --global core.excludesfile ~/.gitignore
    下面是.gitignore文件的样例
-
+git@github.com:notwoms/backup.gitback
 ```
 # Jupyter check points
 .ipynb_checkpoints/
@@ -255,6 +255,31 @@ Thumbs.db
 
 
 ## 暂存箱
+
+环境变量GIT_SSH_COMMAND：
+
+从Git版本2.3.0可以使用环境变量GIT_SSH_COMMAND，如下所示：
+
+GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_example" git clone example
+
+请注意，-i有时可以被您的配置文件覆盖，在这种情况下，您应该给SSH一个空配置文件，如下所示：
+
+GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_example -F /dev/null" git clone example
+
+配置core.sshCommand：
+
+从Git版本2.10.0，您可以配置每个repo或全局，所以您不必再设置环境变量！
+
+     
+    git config core.sshCommand "ssh -i ~/.ssh/id_rsa_example -F /dev/null"
+     
+    git pull
+     
+    git push
+https://www.cnblogs.com/chenkeyu/p/10440798.html
+git 指定要提交的ssh key
+
+
     3：把该key加到ssh agent上。由于不是使用默认的.ssh/id_rsa，所以你需要显示告诉ssh agent你的新key的位置
 
     $ ssh-add ~/.ssh/id_rsa_work
@@ -427,3 +452,32 @@ UI界面commit
 185.31.18.133 avatars0.githubusercontent.com
 185.31.19.133 avatars1.githubusercontent.com
 # GitHub End
+
+
+…or create a new repository on the command line
+echo "# demo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:notwoms/demo.git
+git push -u origin master
+…or push an existing repository from the command line
+git remote add origin git@github.com:notwoms/demo.git
+git push -u origin master
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+…or create a new repository on the command line
+echo "# demo" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/notwoms/demo.git
+git push -u origin master
+…or push an existing repository from the command line
+git remote add origin https://github.com/notwoms/demo.git
+git push -u origin master
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+git 
