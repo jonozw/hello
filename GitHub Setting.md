@@ -535,7 +535,7 @@ Git 目前支持的三种协议 git://、ssh:// 和 http://，其代理配置各
 ```
 git config credential.helper 'store [<options>]'
 git config credential.helper store --file=git-credential
-git config --global http.sslVerify false
+git config --get credential.helper
 
 
 
