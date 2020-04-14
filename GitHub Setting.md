@@ -76,6 +76,35 @@
 5. Key的部分, 打开公钥文件`xxx.pub`, 全部拷贝, 然后这里粘贴
 6. 确认, 完毕
 
+### Git设置代理
+#### 使用命令行 
+```
+// HTTP Proxy
+git config --global http.proxy http://127.0.0.1:10800
+git config --global https.proxy https://127.0.0.1:10800
+// Socks Proxy
+git config --global http.proxy 'socks5://127.0.0.1:10800'
+git config --global https.proxy 'socks5://127.0.0.1:10800'
+// SSL Verify Setting
+git config --global http.sslVerify false
+// 取消代理设置
+git config --global --unset http.proxy
+git config --global --unset https.proxy
+// 查看代理设置
+git config --global --get http.proxy
+git config --global --get https.proxy
+```
+#### 使用配置文件
+```
+.gitconfig
+[http]
+proxy = socks5://127.0.0.1:10800
+[https]
+proxy = socks5://127.0.0.1:10800
+sslVerify = false
+```
+
+
 ### SSH选读部分
 ### 如何在一台机器上共存多个GitHub帐号(多SSH密钥的处理)
 1. 生成多个SSH密钥对
@@ -137,6 +166,7 @@ error: failed to push some refs to
    + 执行`git remote add origin git@server-name:path/repo-name.git`  
      对应到GitHub, 就是(大写的字母是要被替换的)  
    + 执行`git remote add origin git@github.com:RP-ACCOUNT-NAME/RP-REPO-NAME.git`  
+   + 执行`git remote add origin https://github.com/RP-ACCOUNT-NAME/RP-REPO-NAME.git`  
    + 执行`git push -u origin master`  
      来进行第一次推送行为, 推送master分支的所有内容  
      注意, 如果没有执行第二步, 目录为空, 则执行此命令会出错.  
@@ -481,3 +511,16 @@ git push -u origin master
 You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
 
 git 
+
+### KnowHow
++ git clone 默认会下载项目的完整历史版本，如果你只关心最新版的代码，而不关心之前的历史信息，可以使用 git 的浅复制功能，如：
+  `git clone --depth=1 https://github.com/xxx.git`
+
+
+### Git SSH Proxy
+[Git如何设置SSH代理](https://segmentfault.com/q/1010000000118837)
+Git 目前支持的三种协议 git://、ssh:// 和 http://，其代理配置各不相同：
++ core.gitproxy 用于 git:// 协议;
++ http.proxy 用于 http:// 协议;
++ ssh:// 协议的代理需要配置 ssh 的 ProxyCommand 参数;
+[内网配置Git SSH代理](https://blog.csdn.net/twilightdream/article/details/78260394)
