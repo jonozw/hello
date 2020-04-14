@@ -161,7 +161,7 @@ error: failed to push some refs to
 2. 其次要保证此目录不是一个空目录, 不然后续命令执行会出错
    + 至少放一个Readme.md在这个目录下
    + 执行`git add *`
-   + 执行`git commit -a "initial"`
+   + 执行`git commit -m "initial"`
 3. 然后关联远程仓库  
    + 执行`git remote add origin git@server-name:path/repo-name.git`  
      对应到GitHub, 就是(大写的字母是要被替换的)  
@@ -527,3 +527,14 @@ Git 目前支持的三种协议 git://、ssh:// 和 http://，其代理配置各
 + http.proxy 用于 http:// 协议;
 + ssh:// 协议的代理需要配置 ssh 的 ProxyCommand 参数;
 [内网配置Git SSH代理](https://blog.csdn.net/twilightdream/article/details/78260394)
+
+
+### Git Credential helper
+[Git配置credential helper](https://blog.csdn.net/u012163684/article/details/52433645/)
+[git-credential-store](https://git-scm.com/docs/git-credential-store)
+```
+git config credential.helper 'store [<options>]'
+git config credential.helper store --file=git-credential
+git config --global http.sslVerify false
+
+```
