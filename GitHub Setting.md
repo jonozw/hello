@@ -179,6 +179,9 @@ error: failed to push some refs to
    git config --global core.excludesfile ~/.gitignore
    下面是.gitignore文件的样例
 git@github.com:notwoms/backup.gitback
+
+
+
 ```
 # Jupyter check points
 .ipynb_checkpoints/
