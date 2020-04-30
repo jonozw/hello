@@ -118,7 +118,14 @@ sslVerify = false
      - ssh sh-add 
 2. 创建修改SSH配置文件
    + 创建`~/.ssh/config`
-   + 
+   + 修改`~/.ssh/config`文件, 为每个帐号, 生成相应的Host配置如下
+    ```
+    Host RP-ACCOUNT-NAME.github.com
+    HostName  github.com
+    User  git
+    IdentityFile  ~/.ssh/RP-ACCOUNT-NAME.ssh-private-key
+    ```
+3.    
 
 ### SSH配置文件
   在linux下, SSH配置文件的位置在 `~/.ssh/ssh_config`  
