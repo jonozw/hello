@@ -132,7 +132,8 @@ sslVerify = false
   在windows下, SSH配置文件在 `%USERPROFILE%\.ssh\config`  
 
 1. ForwardAgent yes
-2. git config credential.helper store
+2. git config credential.helper store 
+3. 
 
 
 
