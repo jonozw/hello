@@ -125,7 +125,7 @@ sslVerify = false
     User  git
     IdentityFile  ~/.ssh/RP-ACCOUNT-NAME.ssh-private-key
     ```
-3.    
+3. 
 
 ### SSH配置文件
   在linux下, SSH配置文件的位置在 `~/.ssh/ssh_config`  
