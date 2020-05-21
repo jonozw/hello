@@ -185,7 +185,63 @@
 
 
 
-### 即食燕麦片和快熟燕麦片的区别 @20200513
+### 即食燕麦片和快熟燕麦片的Here is the first request for products from Oman.
+
+ 
+
+Is there anything we can source using your contacts on this list?
+
+ 
+
+General Specifications required for ICU ventilators
+
+ 
+
+- Suitable for Adult/ Paed/ Neonatal
+
+ 
+
+- Support all General Pressure Support, Volume support and Non Invasive Modes of Ventilations.
+
+ 
+
+- Must support High Flow Ventilations 150/ 200 Litres/ Minutes.
+
+ 
+
+- With Sidestram EtCO2 & SpO2 monitoring.
+
+ 
+
+- Paramagnetic Oxygen Sensor Preferred.
+
+ 
+
+- Dual limb circuits for NIV
+
+ 
+
+- Humidifier and Nebuliser.
+
+ 
+
+- Weaning tools..
+
+ 
+
+- Graphic display..
+
+ 
+
+- 100 patient tubings (70 for adults, 20 for Paed, 10 for Neonates.)
+
+ 
+
+- Open type for consumables/ tubing’s..
+
+ 
+
+- Additional Battery back-up..区别 @20200513
 
 桂格官网的回答, 两者的制作过程略有不同。
 1. 快熟燕复麦片是经蒸煮后再焗烤，因而可以减低食物酵素引起的变坏速度，同时亦添加烤后的香味。然后每粒燕麦粒会切碎成三份制，再蒸煮一次和碾平为燕麦片。 
