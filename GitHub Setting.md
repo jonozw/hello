@@ -131,6 +131,18 @@ sslVerify = false
   在linux下, SSH配置文件的位置在 `~/.ssh/ssh_config`  
   在windows下, SSH配置文件在 `%USERPROFILE%\.ssh\config`  
 
+```
+Host github.com *.github.com
+    HostName  %h
+    User      git
+    Port      22
+
+
+    ProxyCommand connect -H 127.0.0.1:1087 %h %p #设置代理
+    IdentityFile  ~/.ssh/your_private_key_file
+    IdentitiesOnly yes
+```
+
 1. ForwardAgent yes
 2. git config credential.helper store 
 3. 
@@ -535,7 +547,9 @@ Git 目前支持的三种协议 git://、ssh:// 和 http://，其代理配置各
 + http.proxy 用于 http:// 协议;
 + ssh:// 协议的代理需要配置 ssh 的 ProxyCommand 参数;
 [内网配置Git SSH代理](https://blog.csdn.net/twilightdream/article/details/78260394)
-
+[Git走Proxy代理总结](https://blog.csdn.net/LeoFitz/article/details/81326315)
+[给Github设置代理](https://gist.github.com/chuyik/02d0d37a49edc162546441092efae6a1)
+[GitHub 加速最佳实践](https://www.hi-linux.com/posts/11850.html)
 
 ### Git Credential helper
 [Git配置credential helper](https://blog.csdn.net/u012163684/article/details/52433645/)
