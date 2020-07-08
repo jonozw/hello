@@ -132,11 +132,19 @@ sslVerify = false
   在windows下, SSH配置文件在 `%USERPROFILE%\.ssh\config`  
 
 ```
+Host nick.github.com
+  HostName  github.com
+  User  git
+  IdentityFile  ~/.ssh/private_ssh_key_file
+# 设置HTTP转SSH代理
+	ProxyCommand connect -H 127.0.0.1:8888 github.com %p
+```
+
+```
 Host github.com *.github.com
     HostName  %h
     User      git
     Port      22
-
 
     ProxyCommand connect -H 127.0.0.1:1087 %h %p #设置代理
     IdentityFile  ~/.ssh/your_private_key_file
