@@ -136,8 +136,12 @@ Host nick.github.com
   HostName  github.com
   User  git
   IdentityFile  ~/.ssh/private_ssh_key_file
-# 设置HTTP转SSH代理
+# 设置使用HTTP代理
 	ProxyCommand connect -H 127.0.0.1:8888 github.com %p
+# 设置使用SOCKS代理
+	ProxyCommand connect -S 127.0.0.1:8888 github.com %p
+# 事实上, connect.exe在Git Windows版本中自带, 无需外购
+# mklink connect.exe "C:\Program Files\Git\mingw64\bin\connect.exe"
 ```
 
 ```
