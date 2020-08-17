@@ -319,6 +319,35 @@ Thumbs.db
   最后, 执行SVN的checkout吧:)
 
 
+### 内部SVN外部Git
+目的
++ 内部采用SVN, 进行基本权限管理
++ 外部采用Git做自动备份
+### 目录结构
+项目名称为PNAME
+ROOT-GIT-DIR
+└─PNAME.git
+  ├─.git(dir)
+  ├─.gitignore
+  └─PANME(dir)
+      ├─.svn(dir)
+      └─trunk(dir)
+        ├─content.txt
+        ├─contentA(dir)
+        └─contentB(dir)
+```BAT
+  pushd %ROOT-GIT-DIR%
+  mkdir %PNAME.git%
+  pushd %PNAME.git%
+  git init
+  modify .gitignore to ignore .svn at least
+  mkdir %PNAME%
+  pushd %PANME%
+  svn update ...
+```
+
+
+
 ## 暂存箱
 
 环境变量GIT_SSH_COMMAND：
