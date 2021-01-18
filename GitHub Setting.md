@@ -612,3 +612,42 @@ git config --get credential.helper
 
 
 ```
+
+
+### Git LFS
+[详解Git大文件存储Git LFS](https://www.cnblogs.com/cangqinglang/p/13097777.html)  
+1. 在每个需要LFS支持的仓库下, 运行 ` git lfs install` 来初始化Git对LFS的支持
+2. 当你的仓库初始化了Git LFS后, 就可以通过使用 `git lfs track` 来指定要跟踪的文件了
+3. 安装Git LFS后, 可以像往常一样使用`git clone`命令来克隆Git LFS仓库. 在克隆过程的结尾, Git 将检出master分支, 并且将自动下载完成检出过程所需的所有Git LFS文件
+   `git clone git@bitbucket.org:ACCOUNTS/PROJECTS.git`
+4. 如果需要克隆包含大量LFS文件的仓库, 则显式使用`git lfs clone`命令可提供更好的性能  
+   `git lfs clone git@bitbucket.org:ACCOUNTS/PROJECTS.git`
+5. 像克隆一样, 可以使用常规的`git pull`命令拉取Git LFS仓库. 拉取完成后, 所有需要的Git LFS文件都会作为自动检出过程的一部分而被下载. 
+6. 不需要显式的命令即可获取Git LFS内容. 然而, 如果检出因为意外原因而失败, 你可以通过使用`git lfs pull`命令来下载当前提交的所有丢失的Git LFS内容. 
+7. 如`git lfs clone`命令一样, `git lfs pull`命令会批量下载Git LFS文件. 如果用户知道自上次拉取以来已经更改了大量文件, 则可以`显式`调用`git lfs pull`命令来批量下载Git LFS内容, 而禁用在检出期间自动下载Git LFS. 这可以通过在调用`git pull`命令时使用`-c`选项覆盖Git配置来完成
+   `git -c filter.lfs.smudge= -c filter.lfs.required=false pull && git lfs pull`
+8. 由于输入的内容很多, 可以创建一个简单的`Git别名(Git Alias)`来执行批处理的Git和Git LFS命令
+   `git config --global alias.plfs "\!git -c filter.lfs.smudge= -c filter.lfs.required=false pull && git lfs pull"`
+   `git plfs`
+9. 使用Git LFS跟踪文件, 当向仓库中添加新的大文件类型时, 需要使用`git lfs track`命令指定一个模式来告知Git LFS对其进行跟踪
+   `git lfs track "*.largefiles"`
+10. Git LFS支持的模式与.gitignore支持的模式相同
+    ```
+    # track all .ogg files in any directory
+      git lfs track "*.ogg"
+    # track files named music.ogg in any directory
+      git lfs track "music.ogg"
+    # track all files in the Assets directory and all subdirectories
+      git lfs track "Assets/"
+    # track all files in the Assets directory but *not* subdirectories
+      git lfs track "Assets/*"
+    # track all ogg files in Assets/Audio
+      git lfs track "Assets/Audio/*.ogg"
+    # track all ogg files in any directory named Music
+      git lfs track "**/Music/*.ogg"
+    # track png files containing "xxhdpi" in their name, in any directory
+      git lfs track "*xxhdpi*.png"
+    ```
+11. 运行`git lfs track`后, 会在当前仓库中生成`.gitattributes`文件. `.gitattributes`是一种Git机制, 用于将`特殊行为` `绑定` 到`某些文件模式`. Git LFS会自动创建或更新.gitattributes文件, 以将跟踪的文件模式绑定到Git LFS过滤器. 但是, 用户`需要`将对.gitattributes文件的任何更改`主动`提交到仓库. 
+
+
