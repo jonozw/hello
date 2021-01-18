@@ -619,6 +619,10 @@ git config --get credential.helper
 
 ### Git LFS
 [详解Git大文件存储Git LFS](https://www.cnblogs.com/cangqinglang/p/13097777.html)  
+[Git LFS上传大文件](https://blog.csdn.net/u012390519/article/details/79441706)  
+[使用GitLFS上传大文件到GitHub](https://blog.csdn.net/m0_46419510/article/details/112719633)  
+
+
 1. 在每个需要LFS支持的仓库下, 运行 ` git lfs install` 来初始化Git对LFS的支持
 2. 当你的仓库初始化了Git LFS后, 就可以通过使用 `git lfs track` 来指定要跟踪的文件了
 3. 安装Git LFS后, 可以像往常一样使用`git clone`命令来克隆Git LFS仓库. 在克隆过程的结尾, Git 将检出master分支, 并且将自动下载完成检出过程所需的所有Git LFS文件
@@ -656,3 +660,8 @@ git config --get credential.helper
 
 ### Git删除commit记录的方法
 [Git删除commit记录的方法-删除push失败的记录](https://blog.csdn.net/quiet_girl/article/details/79487966)  
+
+
+
+### GitBook
+[ProGit](http://git.oschina.net/progit/)  
