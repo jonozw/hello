@@ -665,3 +665,5 @@ git config --get credential.helper
 
 ### GitBook
 [ProGit](http://git.oschina.net/progit/)  
+[git server搭建指南](https://www.cnblogs.com/zhangjianbin/p/6351560.html)  
+[Windows Server2012搭建Git服务器](https://blog.csdn.net/u011781521/article/details/78337632)  
