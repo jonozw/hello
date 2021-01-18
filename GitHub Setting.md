@@ -613,6 +613,9 @@ git config --get credential.helper
 
 ```
 
+### Git Alias
+[Git Alias Howto](https://www.atlassian.com/blog/git/advanced-git-aliases)  
+
 
 ### Git LFS
 [详解Git大文件存储Git LFS](https://www.cnblogs.com/cangqinglang/p/13097777.html)  
@@ -651,3 +654,5 @@ git config --get credential.helper
 11. 运行`git lfs track`后, 会在当前仓库中生成`.gitattributes`文件. `.gitattributes`是一种Git机制, 用于将`特殊行为` `绑定` 到`某些文件模式`. Git LFS会自动创建或更新.gitattributes文件, 以将跟踪的文件模式绑定到Git LFS过滤器. 但是, 用户`需要`将对.gitattributes文件的任何更改`主动`提交到仓库. 
 
 
+### Git删除commit记录的方法
+[Git删除commit记录的方法-删除push失败的记录](https://blog.csdn.net/quiet_girl/article/details/79487966)  
