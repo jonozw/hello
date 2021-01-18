@@ -22,9 +22,14 @@
 **(非必要操作)**
 从Windows10 1803开始, Windows10已经内置OpenSSH Client了, 无需安装. 
 但是如果我们需要在同一台机器上使用多个帐号的话, 就需要多个SSH密钥, 从而需要ssh-agent, 而这部分功能, 是在OpenSSH Server里面的. 网上可以轻易搜到用`设置`安装OpenSSH Server的流程, 但是有些Windows版本, 设置里面没有这个选项, 那就只能采用命令行了.
+[Windows10安装OpenSSH](https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse)
 1. 以管理员身份打开`PowerShell`
 2. 运行  
+   `Get-WindowsCapability -Online | ? Name -like 'OpenSSH*'`
    `Add-WindowsCapability -Online -Name OpenSSH.Server~~~~0.0.1.0`
+   `Add-WindowsCapability -Online -Name OpenSSH.Client~~~~0.0.1.0`
+   `Add-WindowsCapability -Online -Name OpenSSH.Server`
+   `Add-WindowsCapability -Online -Name OpenSSH.Client`
 3. 运行如下四个命令, 安装并启动服务
 ```
    Set-Service sshd -StartupType Automatic
@@ -32,7 +37,11 @@
    Start-Service sshd
    Start-Service ssh-agent
 ```
-   Add-WindowsCapability -Online -Name OpenSSH-Client
+4. 一些额外服务相关命令
+```
+   Get-Service ssh-agent
+   Get-NetFirewallRule -Name *ssh*
+```
 5. 最后键入命令将服务器数据库端口映射到本地端口   
    `ssh  -fNg -L <本地端口>:<服务器数据库地址>  <用户名>@<服务器地址>`
 

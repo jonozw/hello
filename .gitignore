@@ -1,0 +1,30 @@
+# Jupyter check points
+.ipynb_checkpoints/
+
+# Visual studio code
+.vscode/
+
+# Android Studio Navigation editor temp files
+.navigation/
+# Pycharm
+.idea/
+*/.idea
+
+# Apple local file
+*/.DS_Store
+.DS_Store
+
+# Image local file
+Thumbs.db
+
+# System file
+*.bak
+*.tem
+*.temp
+.swp
+*.*~
+~*.*
+
+# SVN file
+.svn/
+*/.svn
