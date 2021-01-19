@@ -609,8 +609,6 @@ git config credential.helper 'store [<options>]'
 git config credential.helper store --file=git-credential
 git config --get credential.helper
 
-
-
 ```
 
 ### Git Alias
