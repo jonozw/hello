@@ -207,7 +207,7 @@ error: failed to push some refs to
    + 执行`git remote add origin git@server-name:path/repo-name.git`  
      对应到GitHub, 就是(大写的字母是要被替换的)  
    + 执行`git remote add origin git@github.com:RP-ACCOUNT-NAME/RP-REPO-NAME.git`  
-   + 执行`git remote add origin https://github.com/RP-ACCOUNT-NAME/RP-REPO-NAME.git`  
+   + 执行`git remote add origin https://RP-ACCOUNT-NAME@github.com/RP-ACCOUNT-NAME/RP-REPO-NAME.git`  
    + 执行`git push -u origin master`  
      来进行第一次推送行为, 推送master分支的所有内容  
      注意, 如果没有执行第二步, 目录为空, 则执行此命令会出错.  
