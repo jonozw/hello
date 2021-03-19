@@ -10,6 +10,24 @@
   - [安装Git](#安装Git)
   - [安装SSH](#安装SSH)
 
+## 太长不看版
+### Git符号链接操作
+```
+  git init
+  git lfs install
+  git lfs track "*.exe"
+  git config core.symlinks true
+  git config user.name "username"
+  git config user.email "user@email.com"
+  git config lfs.https://xxx.github.com/xxx/yyy.git/info/lfs.locksverify true
+  git add *
+  git commit -m "first commit"
+  git branch -M main
+  git remote add origin git@xxx.github.com:xxx/yyy.git
+  git push -u origin main
+  mklink /J xxx path-to-xxx
+```
+
 ## 必要软件
 
 ## 安装Git
