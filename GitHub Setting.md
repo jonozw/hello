@@ -18,7 +18,7 @@
   git lfs track "*.exe"
   git config core.symlinks true
   git config user.name "username"
-  git config user.email "user@email.com"
+  git config user.email "user@email.com"  
   git config lfs.https://xxx.github.com/xxx/yyy.git/info/lfs.locksverify true
   git add *
   git commit -m "first commit"
